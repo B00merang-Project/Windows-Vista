@@ -1749,7 +1749,7 @@ scrollbar button:disabled {
     -gtk-icon-source: none;
     background-size: 100% 100%;
     background-image: none;
-    background-color: red;
+    background-color: transparent;
 }
 
 scrollbar.horizontal button {
