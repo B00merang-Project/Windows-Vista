@@ -1909,7 +1909,7 @@ toolbar {
   box-shadow: 0 1px alpha(@dark_shadow, 0.7); }
   toolbar:backdrop {
     color: @theme_unfocused_fg_color;
-    background-color: @theme_unfocused_bg_color; }
+    background-color: @toolbar_bg_color; }
   toolbar.vertical, toolbar.vertical:backdrop {
     background-image: none; }
   toolbar:disabled {
@@ -1920,16 +1920,18 @@ toolbar {
     background-color: transparent;
     border: 1px solid transparent;
     box-shadow: none;
-    color: @theme_selected_fg_color; }
+    color: @toolbar_fg_color; }
     toolbar button.flat:hover {
       border-color: transparent;
       background-image: none;
       background-color: transparent;
-      color: @theme_selected_fg_color; }
+      color: @toolbar_fg_color; }
     toolbar button.flat:active, toolbar button.flat:checked {
-      color: @theme_selected_fg_color;
+      color: @toolbar_fg_color;
       background-image: linear-gradient(to bottom, #82a7e8, #5d78be 40%, #153c9c 41%, #235db6 66%, #50c3e8);
       box-shadow: inset 0 0 1px 1px alpha(@dark_shadow, 0.45), inset 0 1px shade(@theme_bg_color, 0.35); }
+    toolbar button.flat:backdrop {
+      color: @toolbar_fg_color; }
   toolbar menubar {
     -GtkToolbar-button-relief: normal; }
 
@@ -1938,30 +1940,31 @@ toolbar {
   padding: 4px;
   border-width: 0 0 1px 0;
   border-style: solid;
-  border-color: mix(@borders, @toolbar_bg_color, 0.5);
-  color: @toolbar_fg_color;
-  background-color: @toolbar_bg_color; }
+  border-color: mix(@borders, @titlebar_bg_color, 0.5);
+  color: @theme_fg_color;
+  background-image: none;
+  background-color: @titlebar_bg_color; }
   .primary-toolbar:backdrop {
-    border-color: @theme_unfocused_bg_color;
+    border-color: @titlebar_bg_color;
     color: @theme_unfocused_fg_color;
-    background-color: @theme_unfocused_bg_color; }
+    background-color: @titlebar_bg_color; }
   .primary-toolbar button, .primary-toolbar .raised button {
     padding: 3px;
     border-style: solid;
     border-width: 1px;
     border-radius: 3px;
-    color: @toolbar_fg_color;
-    border-color: shade(@toolbar_bg_color, 0.75);
-    background-color: @toolbar_bg_color;
-    background-image: linear-gradient(to bottom, @toolbar_bg_color 50%, shade(@toolbar_bg_color, 0.95) 51%, shade(@toolbar_bg_color, 0.94));
+    color: @theme_fg_color;
+    border-color: shade(@theme_bg_color, 0.75);
+    background-color: @theme_bg_color;
+    background-image: linear-gradient(to bottom, @theme_bg_color 50%, shade(@theme_bg_color, 0.95) 51%, shade(@theme_bg_color, 0.94));
     box-shadow: inset 0 0 0 1px alpha(@light_shadow, 0.6); }
     .primary-toolbar button:hover, .primary-toolbar .raised button:hover {
-      color: @toolbar_fg_color;
+      color: @theme_fg_color;
       border-color: shade(@theme_selected_bg_color, 0.7);
       background-color: shade(@theme_selected_bg_color, 1.02);
       background-image: linear-gradient(to bottom, shade(@theme_selected_bg_color, 1.12), @theme_selected_bg_color 50%, shade(@theme_selected_bg_color, 0.95) 51%); }
     .primary-toolbar button:active, .primary-toolbar button:checked, .primary-toolbar .raised button:active, .primary-toolbar .raised button:checked {
-      color: @toolbar_fg_color;
+      color: @theme_fg_color;
       border-color: shade(@theme_selected_bg_color, 0.6);
       background-color: shade(@theme_selected_bg_color, 0.95);
       background-image: linear-gradient(to bottom, shade(@theme_selected_bg_color, 1.07), shade(@theme_selected_bg_color, 0.95) 50%, shade(@theme_selected_bg_color, 0.9) 51%); }
@@ -1971,11 +1974,11 @@ toolbar {
         background-color: shade(@theme_unfocused_bg_color, 0.85);
         background-image: linear-gradient(to bottom, shade(@theme_unfocused_selected_bg_color, 1.07), shade(@theme_unfocused_selected_bg_color, 0.95) 50%, shade(@theme_unfocused_selected_bg_color, 0.9) 51%); }
       .primary-toolbar button:active:disabled, .primary-toolbar button:checked:disabled, .primary-toolbar .raised button:active:disabled, .primary-toolbar .raised button:checked:disabled {
-        color: mix(@toolbar_fg_color, @theme_unfocused_disabled_fg_color, 0.1); }
+        color: mix(@theme_fg_color, @theme_unfocused_disabled_fg_color, 0.1); }
         .primary-toolbar button:active:disabled:backdrop, .primary-toolbar button:checked:disabled:backdrop, .primary-toolbar .raised button:active:disabled:backdrop, .primary-toolbar .raised button:checked:disabled:backdrop {
           color: @theme_unfocused_disabled_fg_color; }
     .primary-toolbar button:disabled, .primary-toolbar .raised button:disabled {
-      color: mix(@toolbar_fg_color, @theme_unfocused_disabled_fg_color, 0.1); }
+      color: mix(@theme_fg_color, @theme_unfocused_disabled_fg_color, 0.1); }
       .primary-toolbar button:disabled:backdrop, .primary-toolbar .raised button:disabled:backdrop {
         color: @theme_unfocused_disabled_fg_color; }
     .primary-toolbar button:backdrop, .primary-toolbar .raised button:backdrop {
@@ -2802,8 +2805,10 @@ panel-toplevel.background na-tray-applet {
     color: @theme_selected_fg_color;
     background-color: @theme_selected_bg_color; }
 .nemo-window .sidebar {
-  background-color: @theme_bg_color; }
+  color: @sidebar_fg_color;
+  background-color: @sidebar_bg_color; }
   .nemo-window .sidebar .view, .nemo-window .sidebar iconview, .nemo-window .sidebar row {
+    color: @sidebar_fg_color;
     background-color: transparent; }
     .nemo-window .sidebar .view.cell:selected, .nemo-window .sidebar iconview.cell:selected, .nemo-window .sidebar row.cell:selected {
       border-color: @theme_selected_bg_color;

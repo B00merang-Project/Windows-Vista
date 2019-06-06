@@ -79,7 +79,7 @@
 @define-color menubar_bg_color @bg_color;
 @define-color menubar_fg_color @fg_color;
 @define-color toolbar_bg_color #2a6c8e;
-@define-color toolbar_fg_color @fg_color;
+@define-color toolbar_fg_color #ffffff;
 @define-color sidebar_bg_color @base_color;
 @define-color sidebar_fg_color @fg_color;
 @define-color taskbar_bg_color #0c0c0c;
