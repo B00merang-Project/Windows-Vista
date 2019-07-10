@@ -82,7 +82,7 @@ scale:backdrop slider, switch:backdrop slider {
   transition: 200ms ease-out; }
 
 scrollbar {
-  transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   scrollbar:backdrop {
     transition: 200ms ease-out; }
   scrollbar slider {
@@ -2949,12 +2949,12 @@ panel-toplevel.background na-tray-applet {
   .wnck-pager:hover {
     background-color: alpha(#CCE8FF, 0.2); }
 
-.xfce4-panel.panel {
+.xfce4-panel.panel, .xfce4-panel.background {
   background-color: transparent;
   background-image: url("../cinnamon/panel.png");
   background-size: 1px 100%;
   background-repeat: repeat; }
-  .xfce4-panel.panel button.flat, .xfce4-panel.panel button.sidebar-button {
+  .xfce4-panel.panel button.flat, .xfce4-panel.panel button.sidebar-button, .xfce4-panel.background button.flat, .xfce4-panel.background button.sidebar-button {
     color: #FFFFFF;
     text-shadow: 1px 1px black;
     background-image: url("../cinnamon/panel.png");
@@ -2962,14 +2962,14 @@ panel-toplevel.background na-tray-applet {
     background-color: transparent;
     border-radius: 0;
     border: none; }
-    .xfce4-panel.panel button.flat:hover, .xfce4-panel.panel button.sidebar-button:hover {
+    .xfce4-panel.panel button.flat:hover, .xfce4-panel.panel button.sidebar-button:hover, .xfce4-panel.background button.flat:hover, .xfce4-panel.background button.sidebar-button:hover {
       border: none;
       background-color: mix(#000000, #FFFFFF, 0.25); }
-    .xfce4-panel.panel button.flat:active, .xfce4-panel.panel button.flat:checked, .xfce4-panel.panel button.sidebar-button:active, .xfce4-panel.panel button.sidebar-button:checked {
+    .xfce4-panel.panel button.flat:active, .xfce4-panel.panel button.flat:checked, .xfce4-panel.panel button.sidebar-button:active, .xfce4-panel.panel button.sidebar-button:checked, .xfce4-panel.background button.flat:active, .xfce4-panel.background button.flat:checked, .xfce4-panel.background button.sidebar-button:active, .xfce4-panel.background button.sidebar-button:checked {
       color: #FFFFFF;
       border: none;
       background-color: mix(#000000, #FFFFFF, 0.15); }
-  .xfce4-panel.panel .tasklist button {
+  .xfce4-panel.panel .tasklist button, .xfce4-panel.background .tasklist button {
     color: #FFFFFF;
     text-shadow: 1px 1px black;
     border-radius: 2px;
@@ -2977,13 +2977,13 @@ panel-toplevel.background na-tray-applet {
     padding-bottom: 0;
     padding-top: 0;
     background: -gtk-gradient(radial, left top, 0.55, right bottom, 0.6, from(alpha(white, 0.8)), to(transparent)); }
-    .xfce4-panel.panel .tasklist button:hover {
+    .xfce4-panel.panel .tasklist button:hover, .xfce4-panel.background .tasklist button:hover {
       border: 1px solid alpha(white, 0.4);
       background: -gtk-gradient(radial, left top, 0.55, right bottom, 0.6, from(alpha(white, 0.9)), to(transparent)); }
-    .xfce4-panel.panel .tasklist button:checked, .xfce4-panel.panel .tasklist button:active {
+    .xfce4-panel.panel .tasklist button:checked, .xfce4-panel.panel .tasklist button:active, .xfce4-panel.background .tasklist button:checked, .xfce4-panel.background .tasklist button:active {
       border: 1px solid alpha(white, 0.45);
       background: -gtk-gradient(radial, left top, 0.55, right bottom, 0.6, from(alpha(white, 0.9)), to(transparent)), -gtk-gradient(radial, center bottom, 0.25, center bottom, 0.85, from(alpha(white, 0.35)), to(transparent)); }
-      .xfce4-panel.panel .tasklist button:checked:hover, .xfce4-panel.panel .tasklist button:active:hover {
+      .xfce4-panel.panel .tasklist button:checked:hover, .xfce4-panel.panel .tasklist button:active:hover, .xfce4-panel.background .tasklist button:checked:hover, .xfce4-panel.background .tasklist button:active:hover {
         border: 1px solid alpha(white, 0.55);
         background: -gtk-gradient(radial, left top, 0.55, right bottom, 0.6, from(alpha(white, 0.99)), to(transparent)), -gtk-gradient(radial, center bottom, 0.25, center bottom, 0.85, from(alpha(white, 0.5)), to(transparent)); }
 
