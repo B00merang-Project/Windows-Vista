@@ -40,11 +40,11 @@
 	<distance name="left_width" value="6" />
 	<distance name="right_width" value="6" />
 	<distance name="bottom_height" value="6" />
-	<distance name="left_titlebar_edge" value="6"/>
+	<distance name="left_titlebar_edge" value="9"/>
 	<distance name="right_titlebar_edge" value="9"/>
 	<distance name="title_vertical_pad" value="3"/>
 	<border name="title_border" left="0" right="0" top="1" bottom="0"/>
-	<border name="button_border" left="0" right="0" top="1" bottom="1"/>
+	<border name="button_border" left="0" right="0" top="1" bottom="4"/>
   <distance name="button_width" value="25"/>
   <distance name="button_height" value="18"/>
 </frame_geometry>
