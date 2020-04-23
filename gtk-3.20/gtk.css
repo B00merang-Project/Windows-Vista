@@ -2604,11 +2604,11 @@ panel-toplevel.background button {
   border: none; }
   panel-toplevel.background button:hover {
     border: none;
-    background-color: mix(#000000, #FFFFFF, 0.25); }
+    background-color: mix(#000000, white, 0.2); }
   panel-toplevel.background button:active, panel-toplevel.background button:checked {
     color: #FFFFFF;
     border: none;
-    background-color: mix(#000000, #FFFFFF, 0.15); }
+    background-color: mix(#000000, black, 0.5); }
 
 #tasklist-button {
   color: #FFFFFF;
@@ -2674,11 +2674,11 @@ panel-toplevel.background na-tray-applet {
     border: none; }
     .mate-panel-menu-bar .button:not(#tasklist-button):hover {
       border: none;
-      background-color: mix(#000000, #FFFFFF, 0.25); }
+      background-color: mix(#000000, white, 0.2); }
     .mate-panel-menu-bar .button:not(#tasklist-button):active, .mate-panel-menu-bar .button:not(#tasklist-button):checked {
       color: #FFFFFF;
       border: none;
-      background-color: mix(#000000, #FFFFFF, 0.15); }
+      background-color: mix(#000000, black, 0.5); }
   .mate-panel-menu-bar #tasklist-button {
     color: #FFFFFF;
     text-shadow: 1px 1px black;
@@ -2743,11 +2743,11 @@ panel-toplevel.background na-tray-applet {
     border: none; }
     .xfce4-panel.panel button.flat:hover, .xfce4-panel.panel button.sidebar-button:hover, .xfce4-panel.background button.flat:hover, .xfce4-panel.background button.sidebar-button:hover {
       border: none;
-      background-color: mix(#000000, #FFFFFF, 0.25); }
+      background-color: mix(#000000, white, 0.2); }
     .xfce4-panel.panel button.flat:active, .xfce4-panel.panel button.flat:checked, .xfce4-panel.panel button.sidebar-button:active, .xfce4-panel.panel button.sidebar-button:checked, .xfce4-panel.background button.flat:active, .xfce4-panel.background button.flat:checked, .xfce4-panel.background button.sidebar-button:active, .xfce4-panel.background button.sidebar-button:checked {
       color: #FFFFFF;
       border: none;
-      background-color: mix(#000000, #FFFFFF, 0.15); }
+      background-color: mix(#000000, black, 0.5); }
   .xfce4-panel.panel .tasklist button, .xfce4-panel.background .tasklist button {
     color: #FFFFFF;
     text-shadow: 1px 1px black;
@@ -2765,13 +2765,19 @@ panel-toplevel.background na-tray-applet {
       .xfce4-panel.panel .tasklist button:checked:hover, .xfce4-panel.panel .tasklist button:active:hover, .xfce4-panel.background .tasklist button:checked:hover, .xfce4-panel.background .tasklist button:active:hover {
         border: 1px solid alpha(white, 0.55);
         background: -gtk-gradient(radial, left top, 0.55, right bottom, 0.6, from(alpha(white, 0.99)), to(transparent)), -gtk-gradient(radial, center bottom, 0.25, center bottom, 0.85, from(alpha(white, 0.5)), to(transparent)); }
+  .xfce4-panel.panel #clock-button, .xfce4-panel.background #clock-button {
+    background-image: none; }
+    .xfce4-panel.panel #clock-button:hover, .xfce4-panel.background #clock-button:hover {
+      background-color: alpha(mix(#000000, white, 0.2), 0.5); }
+    .xfce4-panel.panel #clock-button:checked, .xfce4-panel.background #clock-button:checked {
+      background-color: alpha(mix(#000000, black, 0.35), 0.5); }
 
 #XfceNotifyWindow.osd {
   background-color: #F0F0F0;
   color: #000000;
   border-radius: 3px;
   border: none; }
-  #XfceNotifyWindow.osd label#summary {
+  #XfceNotifyWindow.osd label #summary {
     font-weight: bold; }
   #XfceNotifyWindow.osd button {
     padding: 3px;
