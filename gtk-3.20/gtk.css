@@ -2646,8 +2646,6 @@ panel-toplevel.background na-tray-applet {
 .mate-panel-menu-bar {
   color: #FFFFFF;
   background-color: #000000; }
-  .mate-panel-menu-bar button, .mate-panel-menu-bar button.flat {
-    background-color: transparent; }
   .mate-panel-menu-bar, .mate-panel-menu-bar .menubar {
     background-color: #000000; }
   .mate-panel-menu-bar menubar, .mate-panel-menu-bar menubar menuitem, .mate-panel-menu-bar togglebutton {
@@ -2664,6 +2662,8 @@ panel-toplevel.background na-tray-applet {
     font-style: normal; }
     .mate-panel-menu-bar GtkMenu .label:disabled {
       color: mix(#000000, #F0F0F0, 0.5); }
+  .mate-panel-menu-bar > button, .mate-panel-menu-bar > button.flat {
+    background-color: transparent; }
   .mate-panel-menu-bar .button:not(#tasklist-button) {
     color: #FFFFFF;
     text-shadow: 1px 1px black;
