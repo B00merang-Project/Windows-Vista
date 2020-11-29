@@ -2596,10 +2596,11 @@ panel-toplevel.background button {
   color: #FFFFFF;
   text-shadow: 1px 1px black;
   background-image: url("../cinnamon/panel.png");
-  background-size: 1px 100%;
+  background-size: 100% 100%;
   background-color: transparent;
   border-radius: 0;
-  border: none; }
+  border: none;
+  box-shadow: none; }
   panel-toplevel.background button:hover {
     border: none;
     background-color: #333333; }
@@ -2639,13 +2640,18 @@ panel-toplevel.background na-tray-applet {
 
 .mate-panel-menu-bar menubar > menuitem {
   color: #FFFFFF;
-  background-color: #000000; }
+  background-color: transparent; }
+
+.mate-panel-menu-bar menubar {
+  background: transparent; }
 
 .mate-panel-menu-bar {
   color: #FFFFFF;
-  background-color: #000000; }
+  background-color: transparent;
+  background-image: url("../cinnamon/panel.png");
+  background-size: 100% 100%; }
   .mate-panel-menu-bar, .mate-panel-menu-bar .menubar {
-    background-color: #000000; }
+    background-color: transparent; }
   .mate-panel-menu-bar menubar, .mate-panel-menu-bar menubar menuitem, .mate-panel-menu-bar togglebutton {
     border-color: transparent;
     background-color: transparent; }
@@ -2660,20 +2666,35 @@ panel-toplevel.background na-tray-applet {
     font-style: normal; }
     .mate-panel-menu-bar GtkMenu .label:disabled {
       color: #787878; }
-  .mate-panel-menu-bar > button, .mate-panel-menu-bar > button.flat {
-    background-color: transparent; }
-  .mate-panel-menu-bar .button:not(#tasklist-button) {
+  .mate-panel-menu-bar button, .mate-panel-menu-bar button.flat {
     color: #FFFFFF;
     text-shadow: 1px 1px black;
     background-image: url("../cinnamon/panel.png");
-    background-size: 1px 100%;
+    background-size: 100% 100%;
     background-color: transparent;
     border-radius: 0;
-    border: none; }
-    .mate-panel-menu-bar .button:not(#tasklist-button):hover {
+    border: none;
+    box-shadow: none; }
+    .mate-panel-menu-bar button:hover, .mate-panel-menu-bar button.flat:hover {
       border: none;
       background-color: #333333; }
-    .mate-panel-menu-bar .button:not(#tasklist-button):active, .mate-panel-menu-bar .button:not(#tasklist-button):checked {
+    .mate-panel-menu-bar button:active, .mate-panel-menu-bar button:checked, .mate-panel-menu-bar button.flat:active, .mate-panel-menu-bar button.flat:checked {
+      color: #FFFFFF;
+      border: none;
+      background-color: black; }
+  .mate-panel-menu-bar > .button:not(#tasklist-button) {
+    color: #FFFFFF;
+    text-shadow: 1px 1px black;
+    background-image: url("../cinnamon/panel.png");
+    background-size: 100% 100%;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    box-shadow: none; }
+    .mate-panel-menu-bar > .button:not(#tasklist-button):hover {
+      border: none;
+      background-color: #333333; }
+    .mate-panel-menu-bar > .button:not(#tasklist-button):active, .mate-panel-menu-bar > .button:not(#tasklist-button):checked {
       color: #FFFFFF;
       border: none;
       background-color: black; }
@@ -2735,10 +2756,11 @@ panel-toplevel.background na-tray-applet {
     color: #FFFFFF;
     text-shadow: 1px 1px black;
     background-image: url("../cinnamon/panel.png");
-    background-size: 1px 100%;
+    background-size: 100% 100%;
     background-color: transparent;
     border-radius: 0;
-    border: none; }
+    border: none;
+    box-shadow: none; }
     .xfce4-panel.panel button.flat:hover, .xfce4-panel.panel button.sidebar-button:hover, .xfce4-panel.background button.flat:hover, .xfce4-panel.background button.sidebar-button:hover {
       border: none;
       background-color: #333333; }
